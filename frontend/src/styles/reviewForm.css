@@ -1,0 +1,27 @@
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.input-field {
+    width: 100%; /* Changed from 50% to 100% to make inputs full width */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.back {
+    background-color: #6c757d;
+}

@@ -1,0 +1,29 @@
+.review-list-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.review-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn_delete {
+    background-color: red;
+    color: white;
+}
+
+.btn_cancel {
+    background-color: gray;
+    color: white;
+}

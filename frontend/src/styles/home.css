@@ -1,0 +1,18 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 400px; /* Set the width to a specific value */
+}
