@@ -14,7 +14,7 @@ const userAuth = async (req, res, next) => {
             return res.status(401).json({ success: false, message: 'User not authenticated' });
         }
 
-        req.body.userID = decoded.id; // Ensure userID is correctly set
+        req.body.userID = decoded.id;
 
         next();
     } catch (error) {
