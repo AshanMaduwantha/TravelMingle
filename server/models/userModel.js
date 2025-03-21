@@ -14,11 +14,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    verfyOtp: {
+    verifyOtp: {
         type: String,
         default: ''
     },
-    verfyOtpExpireAt: {
+    verifyOtpExpireAt: {
         type: Number,
         default: 0
     },
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
         default: false
     },
     resetOtp: {
-        type: Number,
+        type: String,
         default: ''
     },
     resetOtpExpireAt: {
@@ -36,6 +36,6 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-const userModel = mongoose.model.user || mongoose.model('user', userSchema);
+const userModel = mongoose.models.user || mongoose.model('user', userSchema);
 
 export default userModel;
