@@ -1,0 +1,250 @@
+/* Apple-Themed CSS for Booked Reservations Page */
+
+/* Main Wrapper */
+.booked-reservations-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    margin-left: 120px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Booked Reservations Card */
+.booked-reservations-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    width: 1400px;
+    max-width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.booked-reservations-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Page Title */
+.booked-reservations-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* User Profile Section */
+.user-profile-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: left;
+}
+
+/* Profile Picture */
+.user-profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ddd;
+    object-fit: cover;
+}
+
+/* User Information */
+.user-info-box {
+    flex: 1;
+}
+
+.user-info-box h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.user-info-box p {
+    font-size: 16px;
+    color: #555;
+    margin: 4px 0;
+}
+
+/* Reservations Table */
+.reservations-table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.reservations-table thead {
+    background: linear-gradient(135deg, #e5e5ea, #d2d2d7);
+}
+
+.reservations-table th,
+.reservations-table td {
+    padding: 16px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.reservations-table th {
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.reservations-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+}
+
+.reservations-table tbody tr:hover {
+    background-color: #f0f0f5;
+    transform: scale(1.01);
+}
+
+/* Highlight effect on the first column */
+.reservations-table tbody tr td:first-child {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+/* Subtle shadow effect on table */
+.reservations-table {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Loading Message */
+.loading-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Status Button Styles */
+.status-button {
+    padding: 10px 20px; /* Consistent padding */
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    min-width: 120px; /* Ensures a minimum width for all buttons */
+    height: 40px; /* Ensures the same height for all buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Completed Status Button - Dark Blue */
+.status-button.completed {
+    background-color: #1756d4; /* Dark blue for completed */
+    color: white;
+}
+
+/* Pending Status Button - Light Blue */
+.status-button.pending {
+    background-color: #1b7ad8; /* Light blue for pending */
+    color: white;
+}
+
+.status-button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Edit and Delete Button Styles */
+.button-container {
+    display: flex;
+    gap: 20px; /* Adds space between buttons */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Edit and Delete Buttons */
+.eedit-button,
+.ddelete-button {
+    padding: 6px 12px; /* Smaller padding */
+    border: none;
+    border-radius: 10px; /* Slightly smaller border-radius */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    min-width: 90px; /* Reduced minimum width for smaller buttons */
+    height: 30px; /* Smaller height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Edit Button - Green */
+.eedit-button {
+    background-color: #239326; /* Green for Edit */
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Delete Button - Red */
+.ddelete-button {
+    background-color: #f44336; /* Red for Delete */
+    color: white;
+}
+
+.eedit-button:hover,
+.ddelete-button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Button Adjustments on Mobile */
+@media (max-width: 900px) {
+    .status-button,
+    .eedit-button,
+    .ddelete-button {
+        font-size: 14px; /* Slightly smaller font on smaller screens */
+        min-width: 100px; /* Adjust the min-width to fit better on small screens */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 10px; /* Smaller gap for stacked buttons */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .booked-reservations-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .user-profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .reservations-table th,
+    .reservations-table td {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
