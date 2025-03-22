@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './ReservationPage.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ReservationPage = () => {
     const today = new Date().toISOString().split("T")[0]; // Get today's date
@@ -57,10 +59,10 @@ const ReservationPage = () => {
 
         try {
             await axios.post('http://localhost:4000/api/reservations/', formData);
-            alert('Reservation submitted successfully!');
+            toast.success('Reservation submitted successfully!');
             resetForm();  // Reset the form after successful submission
         } catch (error) {
-            alert('Error submitting reservation');
+            toast.error('Error submitting reservation');
         }
     };
 
@@ -79,7 +81,7 @@ const ReservationPage = () => {
     };
 
     return (
-     <div className='rBody'>
+        <div className='rBody'>
             <div className="reservation-page">
                 <h1>Hotel_Name Reservation Form</h1>
                 <form onSubmit={handleSubmit}>
@@ -161,7 +163,6 @@ const ReservationPage = () => {
                     <button className='rbutton' type="button" onClick={resetForm}>Reset All Fields</button>
                 </form>
             </div>
-
         </div>
     );
 };
