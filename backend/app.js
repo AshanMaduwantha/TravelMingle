@@ -1,9 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import reservationRouter from "./routes/reservationRoute.js";
 import { dbConnection } from "./database/dbConnection.js";
-import userRouter from "./routes/userRouter.js";
+import hotelsRouter from "./routes/hotels.js"
+import roomsRouter from "./routes/rooms.js"
 
 const app = express();
 dotenv.config({ path: "./config/config.env" });
@@ -19,8 +19,8 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/v1/reservation", reservationRouter);
-app.use("/api/v1/user", userRouter);
+app.use("/api/hotels", hotelsRouter);
+app.use("/api/rooms", roomsRouter);
 
 app.get("/", (req, res) => {
   res.redirect("/login");
@@ -35,6 +35,5 @@ app.get("/login", (req, res, next) => {
 
 dbConnection();
 
-app.use(errorMiddleware);
 
 export default app;
